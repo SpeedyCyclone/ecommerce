@@ -1,0 +1,21 @@
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.link a {
+  color: black;
+  text-decoration: none;
+  list-style: none;
+}
+
+.link a:hover {
+  text-decoration: underline;
+}
+
+.text {
+  text-align: center;
+}

@@ -1,0 +1,63 @@
+<h1 class="create">Contact</h1>
+
+<form
+  [formGroup]="createForm"
+  (ngSubmit)="onSubmit(createForm)"
+  novalidate
+  action="/"
+  method="POST"
+>
+  <div class="form">
+    <tui-input formControlName="name">
+      Name
+      <input tuiTextfield type="text" />
+    </tui-input>
+    <div
+      class="error"
+      *ngIf="
+        createForm.get('name')?.invalid &&
+        (createForm.get('name')?.dirty || createForm.get('name')?.touched)
+      "
+    >
+      Please provide a name.
+    </div>
+  </div>
+  <div class="form">
+    <tui-input formControlName="email">
+      Email
+      <input tuiTextfield type="email" />
+    </tui-input>
+    <div
+      class="error"
+      *ngIf="
+        createForm.get('email')?.invalid &&
+        (createForm.get('email')?.dirty || createForm.get('email')?.touched)
+      "
+    >
+      Please provide a valid email.
+    </div>
+  </div>
+
+  <div class="form">
+    <tui-textarea formControlName="message"> Message </tui-textarea>
+    <div
+      class="error"
+      *ngIf="
+        createForm.get('message')?.invalid &&
+        (createForm.get('message')?.dirty || createForm.get('message')?.touched)
+      "
+    >
+      Please provide the message.
+    </div>
+  </div>
+
+  <button
+    class="form1"
+    appearance="accent"
+    tuiButton
+    type="submit"
+    [disabled]="!createForm.valid"
+  >
+    Create
+  </button>
+</form>

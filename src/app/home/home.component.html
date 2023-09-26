@@ -1,0 +1,15 @@
+<div *ngFor="let item of items$ | async">
+  <div class="card">
+    <h1 class="title">{{ item.name }}</h1>
+    <h2 class="title">By: {{ item.author }}</h2>
+    <p class="price">${{ item.price }}</p>
+    <button
+      class="form1"
+      appearance="accent"
+      tuiButton
+      routerLink="/products/{{ item.id }}"
+    >
+      Read More
+    </button>
+  </div>
+</div>

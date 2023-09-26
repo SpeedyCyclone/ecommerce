@@ -1,0 +1,20 @@
+<div class="ok">
+  <div class="card">
+    <h1 class="title">{{ data?.name }}</h1>
+    <p class="price">${{ data?.price }}</p>
+    <h2 class="author">By: {{ data?.author }}</h2>
+    <ul class="list">
+      <li>Details: {{ data?.details }}</li>
+      <li>Delivery Days: {{ data?.delivery }}</li>
+    </ul>
+    <button
+      class="form1"
+      appearance="accent"
+      tuiButton
+      [routerLink]="['/buy', data.price]"
+      routerLinkActive
+    >
+      Buy
+    </button>
+  </div>
+</div>

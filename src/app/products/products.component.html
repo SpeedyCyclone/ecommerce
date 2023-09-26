@@ -1,0 +1,95 @@
+<h1 class="create">Create a Product</h1>
+
+<form
+  [formGroup]="createForm"
+  (ngSubmit)="onSubmit(createForm)"
+  novalidate
+  action="/"
+  method="POST"
+>
+  <div class="form">
+    <tui-input formControlName="name">
+      Product Name
+      <input tuiTextfield type="text" />
+    </tui-input>
+    <div
+      class="error"
+      *ngIf="
+        createForm.get('name')?.invalid &&
+        (createForm.get('name')?.dirty || createForm.get('name')?.touched)
+      "
+    >
+      Please provide a name.
+    </div>
+  </div>
+  <div class="form">
+    <tui-input formControlName="author">
+      Product Author
+      <input tuiTextfield type="text" />
+    </tui-input>
+    <div
+      class="error"
+      *ngIf="
+        createForm.get('author')?.invalid &&
+        (createForm.get('author')?.dirty || createForm.get('author')?.touched)
+      "
+    >
+      Please provide an author.
+    </div>
+  </div>
+  <div class="form">
+    <tui-input-number
+      formControlName="price"
+      [tuiTextfieldPrefix]="'USD' | tuiCurrency"
+    >
+      Product Price
+    </tui-input-number>
+    <div
+      class="error"
+      *ngIf="
+        createForm.get('price')?.invalid &&
+        (createForm.get('price')?.dirty || createForm.get('price')?.touched)
+      "
+    >
+      Please provide a price (non-zero).
+    </div>
+  </div>
+  <div class="form">
+    <tui-input formControlName="delivery">
+      Product Delivery Days
+      <input tuiTextfield type="number" />
+    </tui-input>
+    <div
+      class="error"
+      *ngIf="
+        createForm.get('delivery')?.invalid &&
+        (createForm.get('delivery')?.dirty ||
+          createForm.get('delivery')?.touched)
+      "
+    >
+      Please provide a delivery day.
+    </div>
+  </div>
+  <div class="form">
+    <tui-textarea formControlName="details"> Product Details </tui-textarea>
+    <div
+      class="error"
+      *ngIf="
+        createForm.get('details')?.invalid &&
+        (createForm.get('details')?.dirty || createForm.get('details')?.touched)
+      "
+    >
+      Please provide the details.
+    </div>
+  </div>
+
+  <button
+    class="form1"
+    appearance="accent"
+    tuiButton
+    type="submit"
+    [disabled]="!createForm.valid"
+  >
+    Create
+  </button>
+</form>

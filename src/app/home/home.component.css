@@ -1,0 +1,17 @@
+.ok {
+  width: 100%;
+  max-width: 100%;
+}
+.card {
+  width: 100px;
+  float: left;
+  border: 5px solid black;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 30px;
+}
+
+.title,
+.price {
+  text-align: center;
+}

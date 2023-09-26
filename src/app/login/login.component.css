@@ -1,0 +1,44 @@
+.form {
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding: 20px;
+}
+
+.create {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.form1 {
+  text-align: center;
+  font-weight: bold;
+  margin: auto;
+  display: flex;
+}
+
+.link {
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+  font-size: 20px;
+  color: black;
+  text-decoration: none !important;
+  list-style: none;
+}
+
+.link a {
+  color: black;
+  text-decoration: none;
+  list-style: none;
+}
+
+.link a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: red;
+  padding-top: 10px;
+}

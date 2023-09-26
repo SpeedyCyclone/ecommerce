@@ -1,0 +1,48 @@
+<h1 class="create">Login</h1>
+
+<form [formGroup]="this.login">
+  <div class="form">
+    <tui-input formControlName="email">
+      Email
+      <input tuiTextfield type="email" />
+    </tui-input>
+    <div
+      class="error"
+      *ngIf="
+        login.get('email')?.invalid &&
+        (login.get('email')?.dirty || login.get('email')?.touched)
+      "
+    >
+      Please provide the email.
+    </div>
+  </div>
+  <div class="form">
+    <tui-input-password formControlName="password">
+      Type the password
+      <input placeholder="Make it secure!" tuiTextfield />
+    </tui-input-password>
+    <div
+      class="error"
+      *ngIf="
+        login.get('password')?.invalid &&
+        (login.get('password')?.dirty || login.get('password')?.touched)
+      "
+    >
+      Please provide the password
+    </div>
+  </div>
+
+  <button
+    class="form1"
+    appearance="accent"
+    tuiButton
+    type="submit"
+    [disabled]="!login.valid"
+    (click)="onLogin()"
+  >
+    Login
+  </button>
+  <h1 class="link">
+    <a routerLink="/signup">Don't have an account? Signup</a>
+  </h1>
+</form>
