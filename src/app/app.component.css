@@ -3,6 +3,10 @@
   background-color: orange;
   text-align: center;
   margin: 0;
+  height: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .label h1 {
@@ -23,4 +27,11 @@
 
 .table button {
   padding: 5px;
+}
+
+.nav {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

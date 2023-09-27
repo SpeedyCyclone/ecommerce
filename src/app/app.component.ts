@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Auth } from '@angular/fire/auth';
+import { TuiBrightness } from '@taiga-ui/core';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,8 @@ export class AppComponent {
   title = '';
   text = '';
   link = '';
+  light = true;
+  mode: TuiBrightness = 'onDark';
   constructor(public auth: Auth) {
     this.auth.onAuthStateChanged((user) => {
       if (user) {
@@ -20,5 +23,10 @@ export class AppComponent {
         this.link = 'signup';
       }
     });
+  }
+
+  switchTheme(): void {
+    this.mode = this.mode === 'onDark' ? 'onLight' : 'onDark';
+    this.light = !this.light;
   }
 }

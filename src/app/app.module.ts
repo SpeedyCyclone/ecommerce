@@ -6,15 +6,25 @@ import {
   TuiDataListModule,
   TuiHostedDropdownModule,
   TuiButtonModule,
+  TuiHintModule,
+  TuiTextfieldControllerModule,
+  TuiDropdownModule,
+  TuiThemeNightModule,
+  TuiModeModule,
+  TuiLoaderModule,
 } from '@taiga-ui/core';
-import { TuiAccordionModule, TuiMarkerIconModule } from '@taiga-ui/kit';
+import {
+  TuiAccordionModule,
+  TuiMarkerIconModule,
+  TuiInputNumberModule,
+  TuiTabsModule,
+  TuiTextareaModule,
+  TuiInputPasswordModule,
+  TuiInputModule,
+} from '@taiga-ui/kit';
 import { TuiCurrencyPipeModule } from '@taiga-ui/addon-commerce';
-
-import { TuiInputNumberModule } from '@taiga-ui/kit';
-import { TuiTabsModule, TuiTextareaModule } from '@taiga-ui/kit';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { TuiInputPasswordModule } from '@taiga-ui/kit';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -26,13 +36,7 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideDatabase, getDatabase } from '@angular/fire/database';
-import {
-  provideFirestore,
-  getFirestore,
-  Firestore,
-} from '@angular/fire/firestore';
-import { TuiInputModule } from '@taiga-ui/kit';
-import { TuiHintModule, TuiTextfieldControllerModule } from '@taiga-ui/core';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
@@ -81,6 +85,10 @@ import { SuccessComponent } from './success/success.component';
     TuiButtonModule,
     TuiInputNumberModule,
     TuiCurrencyPipeModule,
+    TuiDropdownModule,
+    TuiThemeNightModule,
+    TuiModeModule,
+    TuiLoaderModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

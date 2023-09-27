@@ -1,13 +1,9 @@
 import { Component } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
-import { FormGroup } from '@angular/forms';
+import { FormControl, Validators, FormGroup } from '@angular/forms';
 import {
   Auth,
   signInWithEmailAndPassword,
-  GoogleAuthProvider,
-  signInWithRedirect,
   getRedirectResult,
-  signInWithPopup,
 } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 

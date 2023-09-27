@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Firestore, collection, addDoc } from '@angular/fire/firestore';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-buy',
